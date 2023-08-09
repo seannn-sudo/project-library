@@ -1,0 +1,244 @@
+/* Global variable for text color */
+:root {
+    --text-color: #3D3B30;
+}
+
+/* Apply text color variable to all elements */
+*{
+    color: var(--text-color);
+}
+
+/* Body styling */
+body{
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    height: 100vh;
+    display:grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+/* Header styling */
+header {
+    padding: 1em 0.5em;
+    background: #7EAA92;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+/* Statistics styling */
+.stats{
+    display:flex;
+    gap:1em;
+    font-weight: 500;
+    font-size: clamp(1em, 1vw, 1.5em);
+}
+
+/* Footer styling */
+footer{
+    background-color: #7C9D96;
+    font-size: clamp(1em, 1vw, 1.5em);
+    padding:0.4em 0em;
+    text-align: center;
+}
+
+/* Footer link styling */
+footer a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Main content container styling */
+.container{
+    background-color: #F4F2DE;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    padding:2em 2em 0.5em;
+    gap:20px;
+}
+
+/* Book display section styling */
+.book-display{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+    gap:2em;
+}
+
+/* Card styling */
+.card{
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.075);
+    border-radius: .5em;
+    background-color: whitesmoke;
+    padding:1em 2em;
+    overflow-wrap:break-word;
+    border-left: 4px solid #7EAA92;
+    height:fit-content;
+    text-align: center;
+}
+
+/* Card hover effect */
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.6) 1px 2px 3px;
+    border: 1px solid #7EAA92;
+    transform: scale(1.04);
+    transition: all 200ms;
+}
+
+/* Card title styling */
+.card-title{
+    font-size: clamp(1.5em, 2vw, 2em);
+    font-family: bold;
+    border-bottom: 1px solid var(--text-color);
+    padding-bottom:0.5em;
+}
+
+/* Logo styling */
+.logo{
+    font-family: 'GFS Didot', serif;
+    font-size: clamp(1em, 5vw, 2em);
+    font-weight: bold;
+}
+
+/* Modal styling */
+.modal {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Sign-up form styling */
+.sign-up-form {
+    background-color: #F4F2DE;
+    padding: 1em 1.5em 0em;
+    width: 24em;
+    border-radius: 0.5em;
+    transform: scale(0);
+    transition: linear 0.3s;
+    text-align: center;
+}
+
+/* Form title styling */
+.sign-up-form h2 {
+    margin-bottom:1.5em;
+}
+
+/* Input box styling */
+.input-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1em;
+}
+
+/* Close button styling */
+.close-button {
+    color: var(--text-color);
+    position:absolute;
+    top:5px;
+    right:5px;
+}
+
+/* Trigger button styling */
+button.trigger{
+    background-color: #9ED2BE;
+    border: none;
+    border-radius:0.8em;
+    padding:0.5em;
+    width:fit-content;
+    justify-self: center;
+    display: flex;
+    position: sticky;
+    bottom:0.5em;
+}
+
+/* Button in card styling */
+.card button{
+    background-color: #EF6262;
+    border: none;
+    border-radius:0.8em;
+    padding:0.5em;
+    margin-top:0.8em;
+    font-weight:500;
+}
+
+/* Button and close button hover effect */
+button:hover, .close-button:hover{
+    cursor: pointer;
+}
+
+/* Trigger button hover effect */
+button.trigger:hover{
+    transform:scale(1.2);
+}
+
+/* Trigger button icon styling */
+button.trigger .material-symbols-outlined {
+    font-size: clamp(1.5em, 5vw, 2em);
+}
+
+/* Submit button styling */
+#submit-button{
+    background-color:#9ED2BE;
+    border-radius:0.8em;
+    padding:1em 1.5em;
+    margin-bottom:1.5em;
+    font-weight:500;
+    border: none;
+    align-self: center;
+    font-size: clamp(1em, 1vw, 1.5em);
+}
+
+/* Close button hover effect */
+.close-button:hover {
+    color: rgb(228, 14, 14);
+}
+
+/* Show modal and form classes */
+.show-modal {
+    visibility: visible;
+}
+.show-form{
+    transform: scale(1);
+}
+
+/* Common styles for input fields */
+.input-box input{
+    border-radius: 5px;
+    border: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 6px 6px 6px 10px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: clamp(1em, 1.5vw, 1.5em);
+    height:2em;
+}
+
+/* Styling for read status checkbox */
+.is-read input{
+    width:clamp(1em, 1.5vw, 1.5em);
+    aspect-ratio: 1/1;
+}
+
+/* Styling for read status label */
+.is-read{
+    display:flex;
+    align-items: center;
+    gap:5px;
+    padding-left:10px
+}
+
+/* Placeholder and label styles for input fields */
+input::placeholder, .is-read label {
+    color: var(--text-color);
+    font-size: clamp(1em, 1.5vw, 1.5em);
+}
+
+/* Remove input focus outline */
+input:focus {
+    outline:none;
+}
